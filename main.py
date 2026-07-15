@@ -26,7 +26,7 @@ async def main() -> None:
         
     try:
         
-        for user in config.get('adminUserId', []):
+        for user in config.get('adminsUserIds', []):
             
             time = datetime.datetime.now()
             await client.send_message(PeerUser(user), f"BackUp in {time} 👇👇👇")
