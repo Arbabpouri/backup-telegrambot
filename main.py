@@ -37,7 +37,7 @@ async def main() -> None:
                     continue
                 
                 try:
-                    await client.send_file(PeerUser(user), file, caption='with love ⚡️')
+                    await client.send_file(PeerUser(user), file, caption=f'BackUp for {file}')
                     print(f"{file} sent to {user} successfully.")
                 except Exception as e:
                     print(f'error in send, file = {file} and user {user}, error:', e)
