@@ -1,3 +1,4 @@
+import datetime
 import os
 from telethon import TelegramClient
 from telethon.tl.types import PeerUser
@@ -27,6 +28,9 @@ async def main() -> None:
         
         for user in config.get('adminUserId', []):
             
+            time = datetime.datetime.now()
+            await client.send_message(PeerUser(user), f"BackUp in {time} 👇👇👇")
+            
             for file in config.get('directorys', []):
                 
                 if not os.path.exists(file):
@@ -37,6 +41,8 @@ async def main() -> None:
                     print(f"{file} sent to {user} successfully.")
                 except Exception as e:
                     print(f'error in send, file = {file} and user {user}, error:', e)
+            
+            
 
     except Exception as ex:
         print(f"An error occurred: {ex}")
