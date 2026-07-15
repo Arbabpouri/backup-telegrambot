@@ -15,7 +15,6 @@ pip install -r requirements.txt
 - Add your api hash
 - Add your bot token
 - Add file path
-- Setting the time to send
-- Run main.py
+- Setting the cron this main.py file
 
-My id in telegram [SardarCyberym](https://t.me/Oxygn16) :speech_balloon:
+My id in telegram [Arbabpouri](https://t.me/Arbabpouri) :speech_balloon:
